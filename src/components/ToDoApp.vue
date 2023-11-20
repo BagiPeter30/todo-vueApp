@@ -78,7 +78,7 @@ export default
   <tbody>
     <tr v-for="(task, t) in tasks" :key="t">
       <td>{{task.name}}</td>
-      <td style="width: 120px">
+      <td style=" width 120px">
         <span @click="change(t)" class="updateStatus">
           {{ task.status }}
         </span>
