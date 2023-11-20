@@ -23,16 +23,10 @@ export default
   methods:{
     addNew(){
      if(this.task.length === 0) return;
-      if(this.editTask === null){ 
       this.tasks.push({
         name: this.task,
         status: 'elvégzendő'
       });
-    }else{
-      this.tasks[this.editTask].name = this.tasks;
-      this.editTask = null;
-    }
-
      this.task = '';
     },
     deletTask(t){
@@ -78,7 +72,7 @@ export default
   <tbody>
     <tr v-for="(task, t) in tasks" :key="t">
       <td>{{task.name}}</td>
-      <td style=" width 120px">
+      <td style=" width: 120px">
         <span @click="change(t)" class="updateStatus">
           {{ task.status }}
         </span>
